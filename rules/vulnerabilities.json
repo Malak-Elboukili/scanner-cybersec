@@ -1,0 +1,11 @@
+{
+	"rules":[
+	{"port":21,"service":"ftp","version":"vsftpd 2.3.4","severity":"CRITIQUE","description":"Backdoor vsftpd 2.3.4 CVE-2011-2523"},
+	{"port":23,"service":"telnet","version":"","severity":"CRITIQUE","description":"telnet non chiffre-credentials visibles"},
+	{"port":1524,"service":"shell","version":"","severity":"CRITIQUE","description":"shell root ouvert sans authentification "},
+	{"port":3306,"service":"mysql","version":"","severity":"ELEVE","description":"mysql expose sur le reseau"},
+	{"port":5900,"service":"vnc","version":"","severity":"ELEVE","description":"VNC acces bureau a distance"},
+	{"port":445,"service":"netbios-ssn","version":"","severity":"ELEVE","description":"SMB partage fichiers expose"},
+	{"port":22,"service":"ssh","version":"","severity":"MOYEN","description":"SSH-verifier version et configuration"}
+	]
+}
