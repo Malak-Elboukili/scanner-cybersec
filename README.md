@@ -4,27 +4,61 @@ Outil d'audit et de reconnaissance réseau automatisé développé en Python, co
 
 ## Fonctionnalités
 
-- **Découverte d'hôtes :** Identification des machines actives sur un réseau local.
-- **Scan de ports TCP :** Analyse rapide et optimisée par **multi-threading** pour détecter les ports ouverts.
-- **Analyse applicative (Banner Grabbing) :** Extraction des signatures et bannières des services actifs (ex: versions de serveurs FTP, SSH, HTTP).
-- **Détection des vulnérabilités (CVE) :** Croisement automatisé des bannières récupérées avec une base de règles locale au format JSON.
-- **Scoring de risque :** Évaluation et attribution d'un niveau de criticité par machine auditée.
-- **Rapports dynamiques :** Génération automatique de rapports d'audit clairs et visuels en HTML.
+* 🔍 Découverte des hôtes actifs sur le réseau local.
+* ⚡ Scan des ports TCP optimisé grâce au multi-threading.
+* 🏷️ Banner Grabbing pour identifier les services et leurs versions.
+* 🛡️ Détection des vulnérabilités connues via une base de règles JSON.
+* 📊 Attribution d'un score de risque pour chaque machine analysée.
+* 📄 Génération automatique de rapports d'audit en HTML.
 
-## Architecture du Projet
+## Technologies utilisées
 
-Voici la structure modulaire du projet, alignée avec les bonnes pratiques de développement Python :
+* Python
+* Socket Programming
+* Multi-threading
+* JSON
+* HTML / CSS
+* Git / GitHub
+* Kali Linux
+* Metasploitable2
+
+## Architecture du projet
 
 ```text
 scanner-cybersec/
 ├── modules/
-│   ├── host_discovery.py    # Algorithmes de découverte des hôtes actifs
-│   ├── port_scanner.py      # Scanner de ports TCP multi-threadé
-│   ├── vuln_checker.py      # Moteur d'analyse et de correspondance CVE
-│   └── report_generator.py  # Générateur de rapports dynamiques en HTML
+│   ├── host_discovery.py
+│   ├── port_scanner.py
+│   ├── vuln_checker.py
+│   └── report_generator.py
 ├── rules/
-│   └── vulnerabilities.json # Base de signatures et règles de vulnérabilités
+│   └── vulnerabilities.json
+├── reports/
 ├── .gitignore
+├── requirements.txt
 ├── README.md
-├── requirements.txt         # Dépendances du projet
-└── scanner.py               # Point d'entrée principal de l'application
+└── scanner.py
+```
+
+## Environnement de test
+
+Le projet a été testé dans un environnement virtuel isolé :
+
+* Kali Linux
+* Metasploitable2
+
+## Exemple de fonctionnalités
+
+* Découverte automatique des hôtes actifs.
+* Détection des ports ouverts.
+* Identification des services par Banner Grabbing.
+* Correspondance avec des vulnérabilités connues (CVE).
+* Génération d'un rapport HTML contenant les résultats de l'analyse.
+
+## Auteur
+
+Malak El Boukili
+
+Étudiante Ingénieure Informatique & Réseaux – EMSI
+
+Future Ingénieure en Cybersécurité
